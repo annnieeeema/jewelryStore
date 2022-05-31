@@ -14,8 +14,25 @@
                 <li>
                     <a href="/">Homepage</a>
                 </li>
+                <li>
+                    <a href="/gemstones/new">Create a New Gemstone Piece!</a>
+                </li>
             </ul>
         </nav>
     </header>
+    <main>
+        <h2>Gemstone List</h2>
+        <ul>
+            <% for(let i=0; i < gemstones.length; i++) { %>
+                <li>
+                    <a href="/gemstones/<%= gemstones[i]._id %>">
+                        <%= gemstones[i].name %>
+                        <%= gemstones[i].description %>
+                        <%= gemstones[i].price %>
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+    </main>
 </body>
 </html>

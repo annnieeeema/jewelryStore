@@ -1,8 +1,28 @@
+//dependencies
 require('dotenv').config(); 
 const express = require('express'); 
 const app = express(); 
 const gemstonesController = require('./controllers/gemstones.js'); 
+const mongoose = require('mongoose'); 
+const methodOverride = require('method-override'); 
+
+
+//middleware
+app.use(methodOverride('_method')); 
+app.use(express.urlencoded({extended: false})); 
 app.use('/gemstones', gemstonesController); 
+
+// Database Configuration
+mongoose.connect(process.env.DATABASE_URL, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+});
+// Database Connection Error / Success
+const db = mongoose.connection;
+db.on('error', (err) => console.log(err.message + ' is mongod not running?'));
+db.on('connected', () => console.log('mongo connected'));
+db.on('disconnected', () => console.log('mongo disconnected'));
+
 
 //routes
 //I
@@ -10,12 +30,10 @@ app.get('/', (req, res) => {
     res.render('index.ejs'); 
 }); 
 //N
-app.get('/new', (req, res) => {
-    res.render('new.ejs'); 
-}); 
 //D
 //U
 //C
+
 //E
 //S
 

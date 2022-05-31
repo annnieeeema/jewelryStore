@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Jewelry Shop</title>
+</head>
+
+<body>
+    <header>
+        <h1>Show Page for <%= gemstone.name %></h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Homepage</a>
+                </li>
+                <li>
+                    <a href="/gemstones">Gemstone Index</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Gemstone Attributes:</h2>
+            <ul>
+                <li>Name: <%= gemstone.name %></li>
+                <li>Description: <%= gemstone.description %></li>
+                <li>Price: <%= gemstone.price %></li>
+            </ul>
+
+            <form action="/gemstones/<%= gemstone._id %>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete Gemstone" />
+            </form>
+
+            <a href="/gemstones/<%= gemstone._id %>/edit">Edit Gem</a>
+        </section>
+    </main>
+</body>
+
+</html>

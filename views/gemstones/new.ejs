@@ -10,19 +10,24 @@
 
 <body>
     <header>
-        <h1>Create a New Jewelry Peice!</h1>
+        <h1>Create a New Gemstone Piece!</h1>
         <nav>
             <ul>
                 <li>
                     <a href="/">Homepage</a>
                 </li>
+                <li>
+                    <a href="/gemstones">Gemstone Index</a>
+                </li>
             </ul>
         </nav>
     </header>
     <main>
-        <form action="/" method="POST">
-            <input type="text" name="name" />
-            <input type="submit" value="Create Jewelry" />
+        <form action="/gemstones" method="POST">
+            Name: <input type="text" name="name" /><br />
+            Description: <input type="text" name="description" /><br />
+            Price: <input type="text" name="price" /><br />
+            <input type="submit" value="Create Gemstone" />
         </form>
     </main>
 </body>
