@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const gemstoneSchema = new Schema({
     name: String, 
     description: String, 
+    img: String, 
     price: String, 
 }); 
 
