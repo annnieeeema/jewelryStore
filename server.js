@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express'); 
 const app = express(); 
 const gemstonesController = require('./controllers/gemstones.js'); 
+const goldsController = require('./controllers/golds.js'); 
 const mongoose = require('mongoose'); 
 const methodOverride = require('method-override'); 
 
@@ -11,6 +12,7 @@ const methodOverride = require('method-override');
 app.use(methodOverride('_method')); 
 app.use(express.urlencoded({extended: false})); 
 app.use('/gemstones', gemstonesController); 
+app.use('/golds', goldsController); 
 
 // Database Configuration
 mongoose.connect(process.env.DATABASE_URL, {

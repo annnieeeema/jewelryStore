@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Jewelry Shop</title>
+</head>
+
+<body>
+    <header>
+        <h1>Show Page for <%= gold.name %>
+        </h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Homepage</a>
+                </li>
+                <li>
+                    <a href="/golds">Gold Jewelry Index</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Gold Attributes:</h2>
+            <ul>
+                <li>Name: <%= gold.name %></li>
+                <li>Description: <%= gold.description %></li>
+                <li><img src="<%= gold.img %>"></li>
+                <li>Price: <%= gold.price %></li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

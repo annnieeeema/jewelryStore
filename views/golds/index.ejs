@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Jewelry Shop</title>
+	</head>
+	<body>
+		<header>
+			<h1>Golds</h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="/">Homepage</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+	</body>
+    <main>
+        <h2>List of Gold Jewelry </h2>
+        <ul>
+            <% for(let i=0; i < golds.length; i++) { %>
+                <li>
+                    <a href="/golds/<%= golds[i]._id %>"><img src="<%= golds[i].img %>"></a>
+                </li>
+                <% } %>
+        </ul>
+    </main>
+</html>
