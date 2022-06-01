@@ -1,29 +1,102 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Jewelry Shop</title>
-	</head>
-	<body>
-		<header>
-			<h1>Golds</h1>
-			<nav>
-				<ul>
-					<li>
-						<a href="/">Homepage</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-	</body>
-    <main>
-        <h2>List of Gold Jewelry </h2>
-        <ul>
-            <% for(let i=0; i < golds.length; i++) { %>
-                <li>
-                    <a href="/golds/<%= golds[i]._id %>"><img src="<%= golds[i].img %>"></a>
-                </li>
-                <% } %>
-        </ul>
-    </main>
+
+<head>
+	<meta charset="utf-8">
+	<title>Jewelry Shop</title>
+	<link rel="stylesheet" href="">
+	<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
+	<style>
+		body {
+			background-color: bisque;
+			margin: 0;
+			padding: 0;
+			font-family: 'Kalam', cursive;
+			text-align: center;
+		}
+
+		h1 {
+			display: inline-block;
+			margin: 0;
+			font-size: 100px;
+			background-image: url('https://c4.wallpaperflare.com/wallpaper/109/974/353/clouds-background-colors-abstract-wallpaper-preview.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			color: transparent;
+			background-clip: text;
+			-webkit-background-clip: text;
+			/* background-position: center; */
+		}
+		ul {
+			list-style: none;
+		}
+		.flex-container{
+			display: flex;
+			background-color: aquamarine;
+			flex-wrap: wrap; 
+		}
+		.item img{
+			width: 200px; 
+			height: 250px; 
+			margin: 10px; 
+		}
+		.item a{
+			background-color: black;
+		}
+		.nav-bar {
+			list-style-type: none;
+			margin: 0; 
+			padding: 0; 
+			overflow: hidden; 
+			background-color: goldenrod;
+			position: sticky; 
+			top: 0; 
+		}
+		.nav-bar li{
+			display: inline;
+			float: left; 
+			font-size: 20px;
+		}
+		.nav-bar li a {
+			display: block;
+			color: white; 
+			text-align: center;
+			padding: 14px 16px; 
+			text-decoration: none;
+		}
+		.nav-bar li a:hover {
+			background-color: blue;
+		}
+	</style>
+
+</head>
+
+<body>
+		<ul class="nav-bar">
+			<li><a href="/">Home</a></li>
+			<li><a href="/golds">Shop Gold Jewelry</a></li>
+			<li><a href="/gemstones">Shop Gemstone Jewelry</a></li>
+			<li><a href="/forms">CONTACT US</a></li>
+			<li style="float:right"><a class="active" href="">LOGIN</a></li>
+			<li style="float:right"><a class="active" href="">SIGN UP</a></li>
+		</ul>
+	<header>
+		<h1>GOLD JEWELRY</h1>
+	</header>
+</body>
+<main>
+	<h2>List of Gold Jewelry </h2>
+	<div class="flex-container">
+		<ul>
+			<% for(let i=0; i < golds.length; i++) { %>
+				<li>
+					<div class="item">
+						<a href="/golds/<%= golds[i]._id %>"><img src="<%= golds[i].img %>" ></a>
+					</div>
+				</li>
+				<% } %>
+		</ul>
+	</div>
+</main>
+
 </html>

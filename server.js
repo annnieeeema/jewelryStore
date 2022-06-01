@@ -4,6 +4,7 @@ const express = require('express');
 const app = express(); 
 const gemstonesController = require('./controllers/gemstones.js'); 
 const goldsController = require('./controllers/golds.js'); 
+const formsController = require('./controllers/forms.js'); 
 const mongoose = require('mongoose'); 
 const methodOverride = require('method-override'); 
 
@@ -13,6 +14,7 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended: false})); 
 app.use('/gemstones', gemstonesController); 
 app.use('/golds', goldsController); 
+app.use('/forms', formsController); 
 
 // Database Configuration
 mongoose.connect(process.env.DATABASE_URL, {
