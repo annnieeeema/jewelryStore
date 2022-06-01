@@ -87,15 +87,15 @@
 <main>
 	<h2>List of Gold Jewelry </h2>
 	<div class="flex-container">
-		<ul>
+		
 			<% for(let i=0; i < golds.length; i++) { %>
-				<li>
+				
 					<div class="item">
 						<a href="/golds/<%= golds[i]._id %>"><img src="<%= golds[i].img %>" ></a>
 					</div>
-				</li>
+				
 				<% } %>
-		</ul>
+		
 	</div>
 </main>
 
