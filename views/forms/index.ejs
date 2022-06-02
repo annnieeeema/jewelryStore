@@ -44,6 +44,56 @@
        .nav-bar li a:hover {
            background-color: linen;
        }
+       h1{
+           background-image: url('https://i.imgur.com/w8BmI5a.png');
+           height: 250px; 
+           color: white; 
+           font-size: 100px;
+           position: center; 
+           background-repeat: no-repeat;
+           background-size: cover; 
+           margin: 0 0 30px 0; 
+           padding-top: 50px; 
+       }
+       div {
+            border-radius: 5px;
+            background-color: wheat; 
+            padding: 20px;
+        }
+        input[type=text], select {
+            padding: 7px 20px; 
+            width: 40%; 
+            display: inline-block; 
+            margin: 8px 0; 
+            border-radius: 5px; 
+            border: outset; 
+            border-color: wheat; 
+            box-sizing: border-box;
+
+        }
+        input[type=submit] {
+            width: 25%; 
+            background-color: rgb(205, 150, 106);
+            color: black; 
+            padding: 14px 20px; 
+            margin: 8px 0; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: rgb(161,146,118);
+        }
+        #subject {
+            padding: 10px 20px; 
+            width: 40%; 
+            display: inline-block; 
+            margin: 15px 0; 
+            border-radius: 5px; 
+            border: outset; 
+            border-color: wheat;
+            font-family: Arial, Helvetica, sans-serif; 
+        }
    </style>
    <title>Document</title>
 </head>
@@ -61,10 +111,30 @@
     </nav>
     <header>
         <h1>CONTACT US</h1>
-        <ul>
-            <li>Name</li>
-            <li>Email</li>
-        </ul>
     </header>
+
+        <div class="container">
+        
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your name"><br />
+
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Your email"><br />
+
+        <label for="issue">Issue</label>
+        <select name="issue" id="issue" >
+            <option value="returns">Returns + exchanges</option>
+            <option value="shipping">Shipping</option>
+            <option value="payment">Payments</option>
+            <option value="covid">COVID-19</option>
+        </select><br />
+
+        <label for="subject"> Subject </label>
+        <textarea name="subject" id="subject" placeholder="What can we help you w today?"cols="30" rows="6"></textarea><br />
+
+        <input type="submit" value="Submit">
+        
+        </div>
+   
 </body>
 </html>
