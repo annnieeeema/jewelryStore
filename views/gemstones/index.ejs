@@ -1,48 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
     <title>Gemstone Store</title>
     <style>
-        body{
-            background-color: bisque;
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            font-family: 'Kalam', cursive;
+            text-align: center;
         }
-        img{
-            max-width: 200px;
-            float: left; 
-            padding: 5px; 
-        }
-        ul{
+
+        ul {
             list-style: none;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+
+        .item img {
+            width: 300px;
+            height: 350px;
+            margin: 10px;
+        }
+
+        .nav-bar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: wheat;
+            position: sticky;
+            top: 0;
+        }
+
+        .nav-bar li {
+            display: inline;
+            float: left;
+            font-size: 20px;
+        }
+
+        .nav-bar li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .nav-bar li a:hover {
+            background-color: linen;
+        }
+
+        #gem-cover {
+            width: 1450px;
+            height: 560px; 
         }
     </style>
 </head>
+
 <body>
+<nav>
+    <ul class="nav-bar">
+        <li><a href="/">Home</a></li>
+        <li><a href="/golds">Shop Gold Jewelry</a></li>
+        <li><a href="/gemstones">Shop Gemstone Jewelry</a></li>
+        <li><a href="/forms">Contact Us</a></li>
+        <li style="float:right"><a class="active" href="">LOGIN</a></li>
+        <li style="float:right"><a class="active" href="">SIGN UP</a></li>
+    </ul>
+</nav>
+
     <header>
-        <h1>Gemstone Jewelry</h1>
-        <img src="https://i.imgur.com/0uNwRFb.png">
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Homepage</a>
-                </li>
-                <li>
-                    <a href="/gemstones/new">Create a New Gemstone Piece!</a>
-                </li>
-            </ul>
-        </nav>
+        <img id="gem-cover" src="https://i.imgur.com/7lX08OS.jpg">
     </header>
+
     <main>
-        <h2>Gemstone List</h2>
-        <ul>
+        <nav>
+            <a href="/gemstones/new">Create a New Gemstone Piece!</a>
+        </nav>
+
+        <h1>Gemstones</h1>
+        <p>Statement pieces to add a bold touch</p>
+        <div class="flex-container">
             <% for(let i=0; i < gemstones.length; i++) { %>
-                <li>
+                <div class="item">
                     <a href="/gemstones/<%= gemstones[i]._id %>"><img src="<%= gemstones[i].img %>"></a>
-                </li>
-            <% } %>
-        </ul>
+                </div>
+                <% } %>
+
+        </div>
     </main>
 </body>
+
 </html>

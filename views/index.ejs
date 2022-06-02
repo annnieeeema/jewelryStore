@@ -4,30 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
     <title>Jewelry Shop</title>
     <style>
-        body{
-            background-color: bisque;
+         body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            font-family: 'Kalam', cursive;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+        }
+        .nav-bar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: wheat;
+            position: sticky;
+            top: 0;
+        }
+
+        .nav-bar li {
+            display: inline;
+            float: left;
+            font-size: 20px;
+        }
+
+        .nav-bar li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .nav-bar li a:hover {
+            background-color: linen;
         }
     </style>
 </head>
+
 <body>
+
+    <nav>
+        <ul class="nav-bar">
+            <li><a href="/">Home</a></li>
+            <li><a href="/golds">Shop Gold Jewelry</a></li>
+            <li><a href="/gemstones">Shop Gemstone Jewelry</a></li>
+            <li><a href="/forms">Contact Us</a></li>
+            <li style="float:right"><a class="active" href="">LOGIN</a></li>
+            <li style="float:right"><a class="active" href="">SIGN UP</a></li>
+        </ul>
+    </nav>
+
     <header>
-        <h1>Jewelry Shop</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/gemstones">Gemstones</a>
-                </li>
-                <li>
-                    <a href="/golds">Gold Jewelry</a>
-                </li>
-                <li>
-                    <a href="/forms">Contact Us</a>
-                </li>
-            </ul>
-            
-        </nav>
+        <h1>Annie's Jewelry Shop</h1>
     </header>
     <img src="https://i.imgur.com/1vXBDTF.png">
     <img src="https://i.imgur.com/rc5tSek.png">
