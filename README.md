@@ -4,7 +4,6 @@ Full CRUD app where user can shop around for jewelry. Store includes page to add
 
 ## Screenshots
 Home Page
-<img src=""/>
 
 Jewelry Index Pages
 <img src="https://i.imgur.com/aQ2PHfv.png"/>
@@ -27,3 +26,10 @@ Contact Page
 [Click here](https://jewelry-store7.herokuapp.com/) to see the deployed app!
 
 ## Next Steps 
+1. Add Authentication 
+2. Create a shopping cart and allow for user reivews
+
+## Wireframe 
+Link to Trello: https://trello.com/b/e0wuip6R/project-2-jewelry-crud-app
+<img src="https://i.imgur.com/NClf4dH.png">
+<img src="https://i.imgur.com/bWwtDKc.png">
