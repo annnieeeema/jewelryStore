@@ -30,6 +30,5 @@ Contact Page
 2. Create a shopping cart and allow for user reivews
 
 ## Wireframe 
-Link to Trello: https://trello.com/b/e0wuip6R/project-2-jewelry-crud-app
 <img src="https://i.imgur.com/NClf4dH.png">
 <img src="https://i.imgur.com/bWwtDKc.png">
